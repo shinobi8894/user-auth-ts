@@ -1,28 +1,28 @@
 {
-  "name": "edeal",
+  "name": "user-auth-ts",
   "version": "1.0.0",
-  "description": "edeal",
-  "main": "index.js",
+  "description": "simple login and signup with passport",
+  "main": "index.ts",
   "scripts": {
     "start": "npx ts-node src/index.ts",
     "dev": "nodemon src/index.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shinobi8894/e-shop-backend.git"
+    "url": "git+https://github.com/shinobi8894/user-auth-ts.git"
   },
   "keywords": [
-    "deal",
-    "shop",
-    "Bet",
+    "user",
+    "auth",
+    "ts",
     "Backend"
   ],
   "author": "shinobi8894",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shinobi8894/e-shop-backend/issues"
+    "url": "https://github.com/shinobi8894/user-auth-ts/issues"
   },
-  "homepage": "https://github.com/shinobi8894/e-shop-backend#readme",
+  "homepage": "https://github.com/shinobi8894/user-auth-ts#readme",
   "devDependencies": {
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
