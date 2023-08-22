@@ -1,10 +1,10 @@
 import express from 'express';
-import userRouter from './user.route';
+import authRouter from './auth.route';
 import configs from '../configs';
 
 const appRoutes = express();
 const { path } = configs;
 
-appRoutes.use(path.USER_PREFIX, userRouter);
+appRoutes.use(path.AUTH_PREFIX, authRouter);
 
 export default appRoutes;

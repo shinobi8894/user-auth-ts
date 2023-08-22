@@ -1,7 +1,7 @@
 {
-  "name": "nifty",
+  "name": "edeal",
   "version": "1.0.0",
-  "description": "Online platform that offers various games of chance, such as poker, slots, sports betting, casino games, and other games where users can potentially win money or prizes.",
+  "description": "edeal",
   "main": "index.js",
   "scripts": {
     "start": "npx ts-node src/index.ts",
@@ -9,20 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shinobi8894/gambling-backend.git"
+    "url": "git+https://github.com/shinobi8894/e-shop-backend.git"
   },
   "keywords": [
-    "Nifty",
-    "Gambling",
+    "deal",
+    "shop",
     "Bet",
     "Backend"
   ],
   "author": "shinobi8894",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shinobi8894/gambling-backend/issues"
+    "url": "https://github.com/shinobi8894/e-shop-backend/issues"
   },
-  "homepage": "https://github.com/shinobi8894/gambling-backend#readme",
+  "homepage": "https://github.com/shinobi8894/e-shop-backend#readme",
   "devDependencies": {
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "express-session": "^1.17.3",

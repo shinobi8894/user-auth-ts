@@ -1,5 +1,5 @@
 const path = {
-    USER_PREFIX : '/user',
+    AUTH_PREFIX : '/auth',
     LOGIN_PREFIX : '/login',
     REGISTER_PREFIX : '/register'
 }

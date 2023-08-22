@@ -3,10 +3,11 @@ import userModel from '../models/user.model';
 import bcrypt from 'bcrypt';
 import LocalStrategy from 'passport-local'
 
-// Set up the passport local strategy
-passport.use(new LocalStrategy(
-    async function (username, password, done) {
-        const data = await userModel.findOne({ username: username });
+passport.use(new LocalStrategy({
+    usernameField: 'email'
+},
+    async function (email, password, done) {
+        const data = await userModel.findOne({ email: email });
         if (!!data) {
             bcrypt.compare(password, data.password, function (err, res) {
                 if (res) {
@@ -16,7 +17,7 @@ passport.use(new LocalStrategy(
                 }
             })
         } else {
-            return done('Incorrect username')
+            return done('Incorrect email')
         }
     }
 ));
@@ -37,10 +38,9 @@ export const doLogin = passport.authenticate('local', {
 })
 
 export const doRegister = async (req, res) => {
-    const { username, email, password } = req.body;
-
+    const { email, password } = req.body;
     // check if all fields are not empty
-    if (!username || !email || !password) {
+    if (!email || !password) {
         return res.status(400).json({ msg: 'All fields are required' });
     }
 
@@ -57,7 +57,7 @@ export const doRegister = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
 
         // create new user object and save to database
-        user = new userModel({ username: username, email: email, password: hashedPassword });
+        user = new userModel({ email: email, password: hashedPassword });
         await user.save();
 
         // send success response

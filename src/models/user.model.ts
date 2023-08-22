@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 
 // Define the user schema and model
 const UserSchema = new mongoose.Schema({
-    username: String,
     email: String,
     password: String
 });
